@@ -1,0 +1,8 @@
+{
+  "description": "Sovereign-Bot: An enterprise-grade AI OS for consciousness management based on Tanya and the Drawer Method.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "name": "בוט מבוסס תניא -Bot Live"
+}
