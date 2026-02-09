@@ -1,0 +1,89 @@
+.haptic-bridge-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.fluid-bg {
+    position: absolute;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, var(--bridge-color-1) 0%, var(--bridge-color-2) 40%, #000 80%);
+    filter: blur(80px);
+    transition: background 2s ease-in-out;
+    animation: liquid-swirl 20s infinite linear;
+    z-index: 0;
+}
+
+.heartbeat-pulse {
+    animation: heartbeat var(--pulse-duration) infinite ease-in-out;
+}
+
+@keyframes liquid-swirl {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    15% {
+        transform: scale(1.15);
+        opacity: 0.8;
+    }
+
+    30% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    45% {
+        transform: scale(1.25);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+}
+
+.calm-wave {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(16, 185, 129, 0.2) 0%, transparent 70%);
+    animation: wave-expand 4s infinite ease-out;
+    pointer-events: none;
+}
+
+@keyframes wave-expand {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+.dignity-pulse-glow {
+    box-shadow: 0 0 100px var(--bridge-glow-color);
+    transition: box-shadow 0.5s ease;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "מנחם ברוך AI - שלוותה OS",
+  "description": "מערכת הפעלה תודעתית (Consciousness OS) לשליטה וריבונות הנפש על הגוף, מותאמת לסביבת המיון ופיקוח קליני.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
