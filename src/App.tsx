@@ -1,11 +1,11 @@
 
 import React, { useState } from 'react';
-import { DRAWERS } from './constants';
-import { SourceManager } from './components/SourceManager';
-import { ChatInterface } from './components/ChatInterface';
-import { LiveInterface } from './components/LiveInterface';
-import { SummaryReport } from './components/SummaryReport';
-import { SourceFile, SessionSummary } from './types';
+import { DRAWERS } from './'../constants'';
+import { SourceManager } from './'../components/SourceManager'/SourceManager';
+import { ChatInterface } from './'../components/ChatInterface'/ChatInterface';
+import { LiveInterface } from './'../components/LiveInterface'/LiveInterface';
+import { SummaryReport } from './'../components/SummaryReport'/SummaryReport';
+import { SourceFile, SessionSummary } from './'../types'';
 
 const App: React.FC = () => {
   const [sources, setSources] = useState<SourceFile[]>([]);
