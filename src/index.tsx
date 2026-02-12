@@ -1,5 +1,6 @@
 
 import React from 'react';
+<<<<<<< HEAD
 import ReactDOM from 'react-dom/client';
 import App from './src/App';
 
@@ -14,3 +15,17 @@ root.render(
     <App />
   </React.StrictMode>
 );
+=======
+import { createRoot } from 'react-dom/client';
+import App from './App';
+
+const container = document.getElementById('root');
+if (container) {
+  const root = createRoot(container);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
+>>>>>>> acf3b63a1fa091fe206170fec8f8cc8f03be4897

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "מנחם-ברוך-ai---שלוותה-os",
+=======
+  "name": "בוט-מבוסס-תניא--bot-live",
+>>>>>>> acf3b63a1fa091fe206170fec8f8cc8f03be4897
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,9 +15,14 @@
   "dependencies": {
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+<<<<<<< HEAD
     "@google/genai": "^1.38.0",
     "lucide-react": "^0.563.0",
     "recharts": "^3.7.0"
+=======
+    "@google/genai": "^1.39.0",
+    "jszip": "3.10.1"
+>>>>>>> acf3b63a1fa091fe206170fec8f8cc8f03be4897
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
