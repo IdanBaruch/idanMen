@@ -6,7 +6,7 @@ import {
     Users, Scale, AlertCircle, Sparkles, Sword, Shield,
     BookOpen, Star
 } from 'lucide-react';
-import { LedgerEntry, StrengthTag } from '../../types';
+import { LedgerEntry, StrengthTag } from '../types';
 
 interface StaffEcosystemProps {
     onBack: () => void;

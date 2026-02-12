@@ -1,4 +1,4 @@
-import { LedgerEntry } from '../types';
+import { LedgerEntry } from '../src/types';
 
 export interface ChameleonEvent {
     id: string;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sparkles, Brain, Trophy, Anchor, ChevronRight, Star, Heart, Activity } from 'lucide-react';
-import { LedgerEntry } from '../../types';
+import { LedgerEntry } from '../types';
 
 interface DailyDigestProps {
     entries: LedgerEntry[];

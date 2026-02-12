@@ -4,7 +4,7 @@ import {
     Shield, Soup, BookOpen, Brain, Sprout, Stethoscope,
     Zap, List, CheckCircle2, AlertCircle, TrendingDown, ShieldCheck, Database
 } from 'lucide-react';
-import { AppRole } from '../../types';
+import { AppRole } from '../types';
 import ChameleonBridge, { ClinicalScores } from '../../services/ChameleonBridge';
 
 

@@ -9,7 +9,7 @@ import {
    UserRound, Plus, Filter, Info, Eye, Gauge, Flame,
    Camera, Mic, BarChart3, Radio
 } from 'lucide-react';
-import { MedicationTask } from '../../types';
+import { MedicationTask } from '../types';
 
 const INITIAL_TASKS: MedicationTask[] = [
    { id: '1', patientName: 'עידן כהן', medName: 'Lorazepam (Ativan)', dosage: '2mg', doctorApproved: false, nurseApproved: false, status: 'pending', auditNotes: 'מינון חריג לפי היסטוריה' },

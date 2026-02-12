@@ -9,7 +9,7 @@ import {
    VolumeX, Zap, Activity, Pill, Sun, Sparkle, Quote, Trophy,
    Home, ShoppingBag, Megaphone
 } from 'lucide-react';
-import { AppSettings, AppRole, PersonaExpert } from '../../types';
+import { AppSettings, AppRole, PersonaExpert } from '../types';
 import { GoogleGenAI } from '@google/genai';
 import BioReactor from './BioReactor';
 import OpsRoom from './OpsRoom';
@@ -23,7 +23,7 @@ import WhisperingButton from './WhisperingButton';
 import DailyDigest from './DailyDigest';
 import TheAnchorDetector from './TheAnchorDetector';
 import { startLiveTriageSession, AudioManager, getFHIRTimeline, FHIRAppointment } from '../../services/geminiService';
-import { LedgerEntry } from '../../types';
+import { LedgerEntry } from '../types';
 
 type Screen = 'mood' | 'ai' | 'journal' | 'medication' | 'success' | 'ops' | 'supply' | 'timeline' | 'forecast' | 'voice' | 'haptic' | 'digest';
 

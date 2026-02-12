@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Brain, Sparkles, Save, ChevronLeft, ShieldCheck, Heart } from 'lucide-react';
-import { StrengthTag } from '../../types';
+import { StrengthTag } from '../types';
 
 interface PsychologistPortalProps {
     onBack: () => void;

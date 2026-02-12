@@ -5,7 +5,7 @@ import {
     Truck, XCircle, ChevronRight, Search, Filter,
     AlertCircle
 } from 'lucide-react';
-import { RequestItem, CategoryId, RequestStatus } from '../../types';
+import { RequestItem, CategoryId, RequestStatus } from '../types';
 import { VOLT_CATEGORIES, MOCK_REQUESTS } from '../../data/voltKidMockData';
 
 interface Props {

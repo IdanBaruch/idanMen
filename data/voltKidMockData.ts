@@ -1,4 +1,4 @@
-import { VoltCategory, PredefinedItem, RequestItem } from '../types';
+import { VoltCategory, PredefinedItem, RequestItem } from '../src/types';
 
 // Predefined items catalog
 export const VOLT_CATEGORIES: VoltCategory[] = [

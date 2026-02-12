@@ -8,7 +8,7 @@ import {
    Activity, Bell, ShieldCheck, HeartPulse
 } from 'lucide-react';
 import { startLiveTriageSession } from '../../services/geminiService';
-import { SafetyContact } from '../../types';
+import { SafetyContact } from '../types';
 
 const RecoveryCockpit: React.FC = () => {
    const [sobrietyDays, setSobrietyDays] = useState(14);

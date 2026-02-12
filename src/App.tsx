@@ -65,7 +65,7 @@ import DailyFuel from './components/DailyFuel';
 import SonicAnchor from './components/SonicAnchor';
 import EnergyManager from './components/EnergyManager';
 import NeuroGrowth from './components/NeuroGrowth';
-import { SettingsProvider, useSettings } from './contexts/SettingsContext';
+import { SettingsProvider, useSettings } from '../contexts/SettingsContext';
 import { AppRole, AppSettings, LedgerEntry } from './types';
 import {
   Activity, Users, HeartHandshake, Waves,

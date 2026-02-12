@@ -6,7 +6,7 @@ import {
   Map, MapPin, BatteryLow, Languages, MessageCircle,
   ClipboardList, ChevronRight, Trophy, Pill, Sparkle
 } from 'lucide-react';
-import { AppRole } from '../../types';
+import { AppRole } from '../types';
 import { GoogleGenAI } from '@google/genai';
 import { startLiveTriageSession, AudioManager } from '../../services/geminiService';
 import IntakeQuestionnaire from './IntakeQuestionnaire';

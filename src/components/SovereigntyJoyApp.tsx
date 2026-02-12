@@ -5,7 +5,7 @@ import {
     Eye, Volume2, Flame, Wind, MessageSquare
 } from 'lucide-react';
 import { GoogleGenAI } from '@google/genai';
-import { AppRole } from '../../types';
+import { AppRole } from '../types';
 
 type SovereigntyMode = 'hud' | 'panic' | 'scanner' | 'cooling' | 'live';
 

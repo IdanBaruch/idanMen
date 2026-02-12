@@ -6,7 +6,7 @@ import {
   LifeBuoy, AlertTriangle, AlertCircle, X, Send, User,
   Clock, ShieldCheck, Info, Search, MapPin, Share2, Activity, Zap, Database, Fingerprint
 } from 'lucide-react';
-import { LedgerEntry } from '../../types';
+import { LedgerEntry } from '../types';
 import ChameleonBridge, { ClinicalScores } from '../../services/ChameleonBridge';
 
 

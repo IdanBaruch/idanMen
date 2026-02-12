@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import PatientApp from './PatientApp';
 import StaffDashboard from './StaffDashboard';
-import { PersonaExpert, AppSettings } from '../../types';
+import { PersonaExpert, AppSettings } from '../types';
 import { GoogleGenAI } from '@google/genai';
 
 const MOCK_SETTINGS: AppSettings = {
