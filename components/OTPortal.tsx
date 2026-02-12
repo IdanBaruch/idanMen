@@ -53,9 +53,9 @@ const OTPortal: React.FC<OTPortalProps> = ({ onBack, onAddEntry }) => {
 
                     <div className="space-y-12">
                         {[
-                            { key: 'focus', label: 'מיקוד וריכוז (Focus)', color: 'accent-blue-500', icon: Target },
-                            { key: 'initiative', label: 'יוזמה (Initiative)', color: 'accent-emerald-500', icon: Zap },
-                            { key: 'execution', label: 'מוטוריקה/עשייה (Execution)', color: 'accent-orange-500', icon: Trophy }
+                            { key: 'focus', label: 'מיקוד וריכוז', color: 'accent-blue-500', icon: Target },
+                            { key: 'initiative', label: 'יוזמה', color: 'accent-emerald-500', icon: Zap },
+                            { key: 'execution', label: 'מוטוריקה/עשייה', color: 'accent-orange-500', icon: Trophy }
                         ].map(m => (
                             <div key={m.key} className="space-y-4">
                                 <div className="flex justify-between items-center">
@@ -90,7 +90,7 @@ const OTPortal: React.FC<OTPortalProps> = ({ onBack, onAddEntry }) => {
                         </div>
                         <div className="text-center">
                             <h4 className="text-xl font-black">משימת היום</h4>
-                            <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">Daily Goal Status</p>
+                            <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">סטטוס מטרה יומית</p>
                         </div>
                         <button
                             onClick={() => setTaskCompleted(!taskCompleted)}
@@ -105,8 +105,8 @@ const OTPortal: React.FC<OTPortalProps> = ({ onBack, onAddEntry }) => {
                     <section className="bg-gradient-to-br from-amber-400 to-orange-600 p-10 rounded-[3rem] shadow-xl shadow-amber-900/10 flex flex-col items-center justify-center gap-6 text-white text-center">
                         <Award size={64} className="animate-bounce" />
                         <div>
-                            <h4 className="text-2xl font-black italic">שלח מדליה (Bonus)</h4>
-                            <p className="text-xs font-bold uppercase opacity-80 mt-1">Boost Sovereignty XP</p>
+                            <h4 className="text-2xl font-black italic">שלח מדליה</h4>
+                            <p className="text-xs font-bold uppercase opacity-80 mt-1">חיזוק ניסיון הריבונות</p>
                         </div>
                         <button
                             onClick={() => handleSave(true)}
@@ -129,7 +129,7 @@ const OTPortal: React.FC<OTPortalProps> = ({ onBack, onAddEntry }) => {
             </main>
 
             <footer className="mt-20 opacity-40 text-center">
-                <p className="text-[10px] font-black uppercase tracking-widest italic font-assistant">Emuna 2: Performance Tracking System | OT Unit</p>
+                <p className="text-[10px] font-black uppercase tracking-widest italic font-assistant">אמונה 2: מערכת מעקב ביצועים | יחידת ריפוי בעיסוק</p>
             </footer>
         </div>
     );

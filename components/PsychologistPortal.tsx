@@ -109,7 +109,7 @@ const PsychologistPortal: React.FC<PsychologistPortalProps> = ({ onBack, onAddEn
                             />
                             <div className="flex-1">
                                 <p className="font-black text-sm text-slate-700">פרטי (לצוות בלבד)</p>
-                                <p className="text-[10px] text-slate-400 font-bold uppercase">Clinical Privacy: Hide from family portal</p>
+                                <p className="text-[10px] text-slate-400 font-bold uppercase">פרטיות קלינית: הסתר מפורטל המשפחה</p>
                             </div>
                         </div>
                     </div>
@@ -132,7 +132,7 @@ const PsychologistPortal: React.FC<PsychologistPortalProps> = ({ onBack, onAddEn
             </main>
 
             <footer className="mt-20 opacity-40 text-center">
-                <p className="text-[10px] font-black uppercase tracking-widest italic">Sovereign Ledger System v4.0 | Clinical Mode</p>
+                <p className="text-[10px] font-black uppercase tracking-widest italic">מערכת הריבונות 4.0 | מצב קליני</p>
             </footer>
         </div>
     );

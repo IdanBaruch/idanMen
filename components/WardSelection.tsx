@@ -6,11 +6,11 @@ interface WardSelectionProps {
 }
 
 const WARDS = [
-    { id: 'ward_a', name: 'מחלקה א\'', type: 'Open', color: 'bg-emerald-500' },
-    { id: 'ward_b', name: 'מחלקה ב\'', type: 'Closed', color: 'bg-indigo-500' },
-    { id: 'er', name: 'מיון (ER)', type: 'Emergency', color: 'bg-rose-500' },
-    { id: 'day_care', name: 'אשפוז יום', type: 'Day Care', color: 'bg-amber-500' },
-    { id: 'rehab', name: 'מרכז שיקום', type: 'Rehabilitation', color: 'bg-cyan-500' },
+    { id: 'ward_a', name: 'מחלקה א\'', type: 'פתוחה', color: 'bg-emerald-500' },
+    { id: 'ward_b', name: 'מחלקה ב\'', type: 'סגורה', color: 'bg-indigo-500' },
+    { id: 'er', name: 'מיון', type: 'דחוף', color: 'bg-rose-500' },
+    { id: 'day_care', name: 'אשפוז יום', type: 'יומי', color: 'bg-amber-500' },
+    { id: 'rehab', name: 'מרכז שיקום', type: 'שיקום', color: 'bg-cyan-500' },
 ];
 
 const WardSelection: React.FC<WardSelectionProps> = ({ onSelect }) => {

@@ -139,7 +139,7 @@ const LittlePrinceApp: React.FC<{ onBack?: () => void }> = ({ onBack }) => {
             </div>
 
             <div className="absolute bottom-8 text-center opacity-40 text-[10px] font-mono">
-                <p>SYSTEM.ENTROPY = {chaosLevel.toFixed(2)}</p>
+                <p>רמת כאוס = {chaosLevel.toFixed(2)}</p>
             </div>
 
             <style>{`

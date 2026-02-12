@@ -99,8 +99,8 @@ const SpiritualSupport: React.FC = () => {
             <Heart className="text-white animate-pulse-slow" fill="currentColor" size={24} />
           </div>
           <div>
-            <h1 className="text-xl font-black italic tracking-tight">היועץ הרוחני</h1>
-            <p className={`text-[10px] font-bold uppercase tracking-widest ${isNightMode ? 'text-blue-400' : 'text-blue-400'}`}>המלווה הרוחני האישי שלך</p>
+            <h1 className="text-xl font-black italic tracking-tight">המלווה הרוחני</h1>
+            <p className={`text-[10px] font-bold uppercase tracking-widest ${isNightMode ? 'text-blue-400' : 'text-blue-400'}`}>תמיכה רוחנית ללא שיפוטיות</p>
           </div>
         </div>
 
@@ -171,7 +171,7 @@ const SpiritualSupport: React.FC = () => {
           </button>
         </div>
         <div className="text-center mt-2">
-          <p className="text-[9px] font-bold text-slate-400/50 uppercase tracking-[0.2em]">Secured by Shalvata OS • Non-Judgmental Core v2.0</p>
+          <p className="text-[9px] font-bold text-slate-400/50 uppercase tracking-[0.2em]">מאובטח על ידי מערכת שלוותה • חיבור לנשמה 2.0</p>
         </div>
       </footer>
 

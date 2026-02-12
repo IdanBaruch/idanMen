@@ -53,7 +53,9 @@ const DeEscalation: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
                 <div className="z-10 text-center animate-in zoom-in duration-1000">
                     <AlertOctagon size={120} className="mx-auto text-red-500 mb-8 animate-pulse" />
                     <h1 className="text-8xl font-black tracking-tighter text-white">עצור.</h1>
-                    <p className="text-2xl mt-4 text-slate-400 font-bold tracking-widest uppercase">אל תזוז. רק תקשיב.</p>
+                    <p className="text-2xl mt-4 text-slate-400 font-bold tracking-widest uppercase">
+                        שתיקה כרפואה. <br /> <span className="text-sm text-slate-500 mt-2 block">אל תדבר. רק תקשיב.</span>
+                    </p>
                 </div>
             )}
 

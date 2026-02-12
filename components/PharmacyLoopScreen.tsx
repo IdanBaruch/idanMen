@@ -126,7 +126,7 @@ const PharmacyLoopScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }
                 className="w-full bg-[#0d9488] text-white py-8 rounded-[2.5rem] font-black text-3xl shadow-xl active:scale-95 transition-all flex flex-col items-center gap-2 group"
               >
                 <Camera size={40} className="mb-1" />
-                צילום קבלה (Scan)
+                צילום קבלה (סריקה)
               </button>
               <div className="flex flex-col items-center gap-1">
                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest italic">נדרש אימות סופר-פארם</p>
@@ -147,7 +147,7 @@ const PharmacyLoopScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
                 <div className="bg-white/90 backdrop-blur-md px-8 py-4 rounded-full flex items-center gap-3 border border-slate-200 shadow-xl">
                   <Loader2 size={20} className="animate-spin text-[#0d9488]" />
-                  <span className="text-xs font-black uppercase tracking-widest text-[#0d9488]">מפענח נתוני מרשם (AWS OCR)...</span>
+                  <span className="text-xs font-black uppercase tracking-widest text-[#0d9488]">מפענח נתוני מרשם...</span>
                 </div>
               </div>
             </div>
@@ -280,7 +280,7 @@ const PharmacyLoopScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }
               <h2 className="text-5xl font-black italic tracking-tighter text-emerald-600 leading-none">הלופ נסגר.</h2>
               <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-600 px-6 py-2 rounded-full border border-emerald-100">
                 <Activity size={16} />
-                <span className="text-xs font-black uppercase tracking-widest italic">Dopamine Levels: Balanced</span>
+                <span className="text-xs font-black uppercase tracking-widest italic">רמות דופמין: מאוזנות</span>
               </div>
             </div>
 

@@ -1,5 +1,5 @@
 
-export type StrengthTag = 'Insight' | 'Self-Regulation' | 'Persistence' | 'Honesty' | 'Initiative' | 'Focus';
+export type StrengthTag = 'Insight' | 'Self-Regulation' | 'Persistence' | 'Honesty' | 'Initiative' | 'Focus' | 'Creativity' | 'Empathy' | 'תובנה' | 'התמדה' | 'כנות' | 'יצירתיות' | 'אמפתיה';
 
 export interface LedgerEntry {
   id: string;
@@ -49,10 +49,33 @@ export enum AppRole {
   OCCUPATIONAL_THERAPIST = 'OCCUPATIONAL_THERAPIST',
   GARDENER = 'GARDENER',
   CEO = 'CEO',
+  SOCIAL_WORKER_PORTAL = 'SOCIAL_WORKER_PORTAL',
   WARD_SELECTION = 'WARD_SELECTION',
   DIGEST = 'DIGEST',
   CONSULTATION = 'CONSULTATION',
-  BOARDROOM = 'BOARDROOM'
+  BOARDROOM = 'BOARDROOM',
+  REALITY_CHECK = 'REALITY_CHECK',
+  ZERO_G = 'ZERO_G',
+  VOICE_PROXY = 'VOICE_PROXY',
+  BIO_REACTOR = 'BIO_REACTOR',
+  ALCHEMIST_ORB = 'ALCHEMIST_ORB',
+  NURSE_RADAR = 'NURSE_RADAR',
+  SYMPTOM_MAP = 'SYMPTOM_MAP',
+  HOMECOMING = 'HOMECOMING',
+  AUTO_SCRIBE = 'AUTO_SCRIBE',
+  EMERGENCY_SUPPORT = 'EMERGENCY_SUPPORT',
+  ADAPTIVE_WORKSPACE = 'ADAPTIVE_WORKSPACE',
+  PERSONALITY_COMPASS = 'PERSONALITY_COMPASS',
+  WARD_SCHEDULE = 'WARD_SCHEDULE',
+  SOVEREIGN_LEDGER = 'SOVEREIGN_LEDGER',
+  SOVEREIGN_BRIEF = 'SOVEREIGN_BRIEF',
+  MEDICAL_VAULT = 'MEDICAL_VAULT',
+  RESILIENCE_LEDGER = 'RESILIENCE_LEDGER',
+  ADAPTIVE_FLOW = 'ADAPTIVE_FLOW',
+  DAILY_FUEL = 'DAILY_FUEL',
+  SONIC_ANCHOR = 'SONIC_ANCHOR',
+  ENERGY_MANAGER = 'ENERGY_MANAGER',
+  NEURO_GROWTH = 'NEURO_GROWTH'
 }
 
 export interface SafetyContact {
@@ -72,9 +95,12 @@ export interface LifePillar {
 }
 
 export interface AppSettings {
-  isAiEnabled: boolean;
-  isMvpMode: boolean;
-  activeFeatures: {
+  userName: string;
+  theme: 'light' | 'dark';
+  notifications: boolean;
+  soundEnabled: boolean;
+  isAiEnabled?: boolean;
+  activeFeatures?: {
     journal: boolean;
     breathing: boolean;
     innerChild: boolean;

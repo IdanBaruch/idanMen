@@ -31,12 +31,12 @@ const MentalWeatherForecast: React.FC = () => {
                     </div>
                     <div>
                         <h2 className="text-2xl font-black italic tracking-tighter text-white">איך אני מרגיש היום?</h2>
-                        <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">Mental Outlook v2.0</p>
+                        <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">תחזית נפשית 2.0</p>
                     </div>
                 </div>
                 <div className="bg-white/5 px-4 py-2 rounded-xl border border-white/10 group cursor-help transition-all hover:bg-white/10">
                     <div className="flex items-center gap-2">
-                        <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">AI Precision</span>
+                        <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">דיוק הבינה</span>
                         <span className="text-emerald-400 font-black text-xs">94%</span>
                     </div>
                 </div>
@@ -71,14 +71,14 @@ const MentalWeatherForecast: React.FC = () => {
                                 <div className="flex items-center gap-4">
                                     <div className="bg-white/5 p-3 rounded-2xl flex flex-col items-center">
                                         <Moon size={18} className="text-slate-400" />
-                                        <span className="text-[8px] font-bold text-slate-500 mt-1">DATA</span>
+                                        <span className="text-[8px] font-bold text-slate-500 mt-1">מידע</span>
                                     </div>
                                     <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
                                     <ArrowRight size={16} className="text-slate-600" />
                                     <div className="h-px flex-1 bg-gradient-to-l from-white/10 to-transparent text-left" />
                                     <div className="bg-white/5 p-3 rounded-2xl flex flex-col items-center">
                                         <Shield size={18} className="text-indigo-400" />
-                                        <span className="text-[8px] font-bold text-slate-500 mt-1">IMPACT</span>
+                                        <span className="text-[8px] font-bold text-slate-500 mt-1">השפעה</span>
                                     </div>
                                 </div>
 

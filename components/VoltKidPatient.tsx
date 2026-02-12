@@ -233,8 +233,8 @@ const VoltKidPatient: React.FC<Props> = ({ onBack }) => {
                             <ShoppingBag size={24} />
                         </div>
                         <div>
-                            <h1 className="text-xl font-black text-slate-800 uppercase tracking-tighter">VoltKid</h1>
-                            <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Supply Request OS</p>
+                            <h1 className="text-xl font-black text-slate-800 uppercase tracking-tighter">וולט-קיד</h1>
+                            <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">מערכת בקשת ציוד</p>
                         </div>
                     </div>
 

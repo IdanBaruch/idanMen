@@ -42,7 +42,7 @@ const OnboardingWizard: React.FC = () => {
                 {step === 1 && (
                     <div className="space-y-8">
                         <div className="space-y-4">
-                            <h1 className="text-4xl font-black text-slate-900 tracking-tight">ברוכים הבאים ל-Shalvata OS</h1>
+                            <h1 className="text-4xl font-black text-slate-900 tracking-tight">ברוכים הבאים למערכת שלוותה</h1>
                             <p className="text-xl text-slate-500 font-medium">כדי להתאים את המערכת בדיוק אליך,<br />אנחנו צריכים להבין איך נראה היום-יום שלך.</p>
                         </div>
 
@@ -94,7 +94,7 @@ const OnboardingWizard: React.FC = () => {
                                 </div>
                                 <div className="text-center">
                                     <h3 className="font-bold text-xl text-slate-800">שפה אוניברסלית</h3>
-                                    <p className="text-slate-400 mt-2">פסיכולוגיה, קשיבות (Mindfulness), אסטרטגיות התמודדות.</p>
+                                    <p className="text-slate-400 mt-2">פסיכולוגיה, קשיבות, אסטרטגיות התמודדות.</p>
                                 </div>
                             </button>
 

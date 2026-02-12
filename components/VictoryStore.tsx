@@ -18,8 +18,8 @@ interface RewardItem {
 const REWARDS_DATA: RewardItem[] = [
     {
         id: 'nike-1',
-        name: 'Air Jordan 1 Retro',
-        brand: 'Nike',
+        name: 'אייר ג\'ורדן 1',
+        brand: 'נייקי',
         points: 2500,
         image: 'https://images.unsplash.com/photo-1584735175315-9d5df23860e6?w=400',
         category: 'נעליים',
@@ -27,8 +27,8 @@ const REWARDS_DATA: RewardItem[] = [
     },
     {
         id: 'sony-xm5',
-        name: 'Sony WH-1000XM5',
-        brand: 'Sony',
+        name: 'אוזניות Sony XM5',
+        brand: 'סוני',
         points: 1800,
         image: 'https://images.unsplash.com/photo-1618366712277-74092b37659b?w=400',
         category: 'טכנולוגיה',
@@ -36,8 +36,8 @@ const REWARDS_DATA: RewardItem[] = [
     },
     {
         id: 'adidas-fit',
-        name: 'Dry-Fit Training Kit',
-        brand: 'Adidas',
+        name: 'ערכת אימון Dry-Fit',
+        brand: 'אדידס',
         points: 850,
         image: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=400',
         category: 'ביגוד',
@@ -45,8 +45,8 @@ const REWARDS_DATA: RewardItem[] = [
     },
     {
         id: 'iphone-15',
-        name: 'iPhone 15 Pro',
-        brand: 'Apple',
+        name: 'אייפון 15 פרו',
+        brand: 'אפל',
         points: 5000,
         image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400',
         category: 'טכנולוגיה',
@@ -68,7 +68,7 @@ const VictoryStore: React.FC<{ onBack: () => void; userPoints?: number }> = ({ o
                         </button>
                         <div>
                             <h1 className="text-3xl font-black tracking-tighter text-slate-800">החנות שלי</h1>
-                            <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">Victory Rewards Store</p>
+                            <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">חנות פרסי הניצחון</p>
                         </div>
                     </div>
 
@@ -110,7 +110,7 @@ const VictoryStore: React.FC<{ onBack: () => void; userPoints?: number }> = ({ o
                         </div>
                         <div>
                             <h3 className="text-2xl font-black text-slate-800 tracking-tight">איך להשיג נקודות?</h3>
-                            <p className="text-sm text-slate-400 font-bold uppercase tracking-widest">Mastering the Treatment Journey</p>
+                            <p className="text-sm text-slate-400 font-bold uppercase tracking-widest">ניצחון במסע הטיפולי</p>
                         </div>
                     </div>
 

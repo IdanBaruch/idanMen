@@ -79,7 +79,7 @@ const SocialWorkerPortal: React.FC<SocialWorkerPortalProps> = ({ onBack, onAddEn
                                 </div>
                                 <div className="text-right">
                                     <h3 className="text-xl font-black italic">{pillar.label}</h3>
-                                    <p className="text-[10px] font-black uppercase text-slate-400">Current Pillar Status</p>
+                                    <p className="text-[10px] font-black uppercase text-slate-400">סטטוס נוכחי</p>
                                 </div>
                             </div>
 
@@ -88,7 +88,7 @@ const SocialWorkerPortal: React.FC<SocialWorkerPortalProps> = ({ onBack, onAddEn
                                     pillar.status === 'yellow' ? 'bg-amber-400 shadow-amber-900/40' :
                                         'bg-rose-500 shadow-rose-900/40'
                                     }`} />
-                                <span className="text-[8px] font-black uppercase tracking-widest text-slate-300">Cycle</span>
+                                <span className="text-[8px] font-black uppercase tracking-widest text-slate-300">החלף</span>
                             </div>
                         </button>
                     ))}
@@ -134,7 +134,7 @@ const SocialWorkerPortal: React.FC<SocialWorkerPortalProps> = ({ onBack, onAddEn
             </main>
 
             <footer className="mt-20 opacity-40 text-center">
-                <p className="text-[10px] font-black uppercase tracking-widest italic font-assistant">Sovereign Rehab System v4.0 | Social Work Dept.</p>
+                <p className="text-[10px] font-black uppercase tracking-widest italic font-assistant">מערכת שיקום הריבונות 4.0 | מחלקת עבודה סוציאלית</p>
             </footer>
         </div>
     );

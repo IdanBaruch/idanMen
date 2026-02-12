@@ -116,8 +116,8 @@ const SmokeFreeApp: React.FC = () => {
                 key={m.id}
                 onClick={() => eraseMyth(m.id)}
                 className={`p-6 rounded-[2rem] text-right transition-all border-2 relative overflow-hidden group ${erasedMyths.includes(m.id)
-                    ? 'bg-emerald-500/10 border-emerald-500/20 opacity-40'
-                    : 'bg-white/5 border-white/10 hover:border-blue-500/40'
+                  ? 'bg-emerald-500/10 border-emerald-500/20 opacity-40'
+                  : 'bg-white/5 border-white/10 hover:border-blue-500/40'
                   }`}
               >
                 {erasedMyths.includes(m.id) ? (
@@ -228,7 +228,7 @@ const SmokeFreeApp: React.FC = () => {
                 onClick={closeSOS}
                 className="w-full bg-white text-black py-8 rounded-[2.5rem] font-black text-2xl shadow-2xl hover:scale-[1.02] active:scale-95 transition-all"
               >
-                אני חופשי (I am Free)
+                אני חופשי
               </button>
               <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest italic">הסיגריה היא רק אשליה של נחמה.</p>
             </div>

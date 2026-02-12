@@ -21,6 +21,7 @@ import VoiceProxy from './VoiceProxy';
 import HapticBridge from './HapticBridge';
 import WhisperingButton from './WhisperingButton';
 import DailyDigest from './DailyDigest';
+import TheAnchorDetector from './TheAnchorDetector';
 import { startLiveTriageSession, AudioManager, getFHIRTimeline, FHIRAppointment } from '../services/geminiService';
 import { LedgerEntry } from '../types';
 
@@ -178,7 +179,7 @@ const PatientApp: React.FC<{
       if (onAddPoints) onAddPoints(150);
 
       // AI Supportive Message (Tactical Reward Phase)
-      const rewardMsg = "Systems Stabilized. Reality Anchor: Active. יהונתן, המנועים שלך מוכנים לריבונות.";
+      const rewardMsg = "המערכות יציבות. עוגן מציאות פעיל. יהונתן, המנועים שלך מוכנים לריבונות.";
       setTranscription(prev => ({ ...prev, ai: rewardMsg }));
       speak(rewardMsg);
 
@@ -224,19 +225,19 @@ const PatientApp: React.FC<{
                </div>
                <div className="hidden md:block">
                   <h1 className="text-xl font-black italic tracking-tight">הכרטיס לחופש</h1>
-                  <p className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400">Liberty Card</p>
+                  <p className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400">ריבונות מלאה</p>
                </div>
             </div>
 
             <div className="flex items-center gap-4">
                <div className="flex items-center gap-3 bg-indigo-500/10 border border-indigo-500/20 px-4 py-2 rounded-full hidden sm:flex">
                   <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-pulse" />
-                  <span className="text-[9px] font-black text-indigo-400 uppercase tracking-widest leading-none">E2EE Secured</span>
+                  <span className="text-[9px] font-black text-indigo-400 uppercase tracking-widest leading-none">אבטחה מקצה לקצה</span>
                </div>
 
                <div className="flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 rounded-full hidden sm:flex">
                   <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-                  <span className="text-[9px] font-black text-emerald-400 uppercase tracking-widest leading-none">Chameleon Sync: Active</span>
+                  <span className="text-[9px] font-black text-emerald-400 uppercase tracking-widest leading-none">סנכרון מלא פעיל</span>
                </div>
 
                <button
@@ -270,12 +271,12 @@ const PatientApp: React.FC<{
                <div className="bg-white/5 border border-white/10 px-6 py-2 rounded-full flex items-center gap-6 backdrop-blur-md">
                   <div className="flex items-center gap-2">
                      <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse" />
-                     <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">אשפוז בית פעיל</span>
+                     <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">מבצע ריבונות פעיל</span>
                   </div>
                   <div className="h-4 w-[1px] bg-white/10" />
-                  <span className="text-xs font-black italic">מחלקה א' (שלוותה)</span>
+                  <span className="text-xs font-black italic">יחידת חלוצים א' (שלוותה)</span>
                   <div className="h-4 w-[1px] bg-white/10" />
-                  <span className="text-[10px] font-black text-indigo-400">יום אשפוז: #14</span>
+                  <span className="text-[10px] font-black text-indigo-400">יום במשימה: #14</span>
                </div>
             </div>
 
@@ -288,7 +289,7 @@ const PatientApp: React.FC<{
                   <div className="flex gap-4 justify-center">
                      <div className="flex items-center gap-4 bg-slate-900/80 border border-white/5 px-6 py-2 rounded-2xl shadow-xl">
                         <div className="text-right">
-                           <p className="text-[9px] font-black text-slate-500 uppercase leading-none">Vitals</p>
+                           <p className="text-[9px] font-black text-slate-500 uppercase leading-none">מדדי גוף</p>
                            <p className={`text-sm font-black italic mt-1 ${bpm > 90 ? 'text-rose-500 animate-pulse' : 'text-emerald-400'}`}>{bpm} BPM</p>
                         </div>
                         <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
@@ -311,178 +312,19 @@ const PatientApp: React.FC<{
                         </button>
                      )}
                   </div>
-
-                  {/* Emergency Dignity Bridge Shortcut (Visible when noise is high) */}
-                  {noiseLevel > 70 && (
-                     <button
-                        onClick={() => setStep('voice')}
-                        className="w-full bg-rose-600/20 border-2 border-rose-500 animate-pulse p-6 rounded-[2.5rem] flex items-center justify-between group hover:bg-rose-600/30 transition-all"
-                     >
-                        <div className="flex items-center gap-4 text-right">
-                           <div className="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center text-white shadow-[0_0_20px_rgba(244,63,94,0.5)]">
-                              <Megaphone size={24} />
-                           </div>
-                           <div>
-                              <p className="text-xl font-black text-white italic leading-none">עזרה בדיבור</p>
-                              <p className="text-[10px] font-bold text-rose-400 uppercase tracking-widest mt-1">Cognitive Prosthetic: Voice Proxy</p>
-                           </div>
-                        </div>
-                        <ShieldAlert className="text-rose-500 group-hover:scale-125 transition-transform" />
-                     </button>
-                  )}
-
-                  {/* Action Grid (The "Arsenal") */}
-                  <div className="grid grid-cols-1 gap-4">
-                     <div className="w-full">
-                        <WhisperingButton
-                           onClick={() => setStep('haptic')}
-                           whisperingText="לחץ כאן בכל הכוח כדי לשדר דופק לאמא. היא תרגיש אותך ותשלח לך רוגע בחזרה."
-                           highlight={true}
-                           haloColor="rgba(244, 63, 94, 0.6)"
-                           className="bg-gradient-to-r from-rose-600 to-rose-700 p-8 rounded-[2.5rem] flex items-center justify-between shadow-[0_20px_40px_rgba(225,29,72,0.3)]"
-                        >
-                           <div className="flex items-center gap-6 text-right w-full">
-                              <div className="w-16 h-16 bg-white/20 rounded-[1.5rem] flex items-center justify-center text-white shadow-xl group-hover:rotate-12 transition-transform">
-                                 <Heart size={36} fill="white" className="animate-pulse" />
-                              </div>
-                              <div className="flex-1">
-                                 <h4 className="text-3xl font-black italic text-white leading-none">נגיעה מהמשפחה</h4>
-                                 <p className="text-[10px] font-bold text-rose-100 uppercase tracking-widest mt-1">Haptic Bridge: Physical Contact</p>
-                              </div>
-                              <Zap className="text-white/40" />
-                           </div>
-                        </WhisperingButton>
-                     </div>
-
-                     <div className="w-full">
-                        <WhisperingButton
-                           onClick={() => setStep('ai')}
-                           whisperingText="קשה לך לדבר? המערכת תשמש לך כפה. נבחר יחד תסריטים רגועים שיסבירו לכולם מה אתה צריך."
-                           className="bg-white/10 backdrop-blur-md p-8 rounded-[2.5rem] border border-white/10"
-                        >
-                           <div className="flex items-center justify-between w-full">
-                              <div className="flex items-center gap-4 text-right">
-                                 <div className="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center text-white shadow-[0_0_20px_rgba(244,63,94,0.5)]">
-                                    <Megaphone size={24} />
-                                 </div>
-                                 <div>
-                                    <p className="text-xl font-black text-white italic leading-none">עזרה בדיבור</p>
-                                    <p className="text-[10px] font-bold text-rose-400 uppercase tracking-widest mt-1">Cognitive Prosthetic: Voice Proxy</p>
-                                 </div>
-                              </div>
-                              <ShieldAlert className="text-rose-500" />
-                           </div>
-                        </WhisperingButton>
-                        <div className="w-full">
-                           <WhisperingButton
-                              onClick={() => setStep('digest')}
-                              whisperingText="כאן תוכל לקרוא את 'ספר הניצחונות' שלך. כל מה שהצוות המטפל תיעד היום כהצלחה וכחוות דעת חיובית - נמצא כאן."
-                              className="bg-emerald-600/10 border border-emerald-500/20 p-8 rounded-[2.5rem]"
-                           >
-                              <div className="flex items-center justify-between w-full">
-                                 <div className="flex items-center gap-4 text-right">
-                                    <div className="w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-white shadow-[0_0_20px_rgba(16,185,129,0.3)]">
-                                       <Trophy size={24} />
-                                    </div>
-                                    <div>
-                                       <p className="text-xl font-black text-white italic leading-none">ההצלחות שלי</p>
-                                       <p className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest mt-1">Sovereign Ledger: Care Team Feedback</p>
-                                    </div>
-                                 </div>
-                                 <ChevronRight className="text-emerald-500" />
-                              </div>
-                           </WhisperingButton>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div className="bg-white/5 border border-white/10 p-12 rounded-[4rem] shadow-2xl relative overflow-hidden group backdrop-blur-md">
-                     <div className="flex justify-between items-center mb-10">
-                        <div className="text-right">
-                           <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 italic">מדד יציבות עצמית (Self-Cohesion)</h4>
-                           <p className="text-2xl font-black italic text-indigo-400 mt-1">בניית ה"אני" האמיתי</p>
-                        </div>
-                        <div className="relative w-20 h-20 flex items-center justify-center">
-                           <svg className="w-full h-full transform -rotate-90">
-                              <circle cx="40" cy="40" r="36" stroke="currentColor" strokeWidth="8" fill="transparent" className="text-slate-700" />
-                              <circle cx="40" cy="40" r="36" stroke="currentColor" strokeWidth="8" fill="transparent" className="text-indigo-500 transition-all duration-1000 ease-out" strokeDasharray={226} strokeDashoffset={226 - (226 * cohesionScore) / 100} />
-                           </svg>
-                           <span className="absolute text-xl font-black text-white">{cohesionScore}</span>
-                        </div>
-                     </div>
-
-                     <div className="space-y-8">
-                        <div className="grid grid-cols-3 gap-2 mb-6">
-                           <div className="bg-white/5 p-3 rounded-2xl text-center">
-                              <span className="block text-xs font-bold text-slate-400 mb-1">חיוניות</span>
-                              <span className="text-lg font-black text-emerald-400">84%</span>
-                           </div>
-                           <div className="bg-white/5 p-3 rounded-2xl text-center">
-                              <span className="block text-xs font-bold text-slate-400 mb-1">שגרה</span>
-                              <span className="text-lg font-black text-blue-400">60%</span>
-                           </div>
-                           <div className="bg-white/5 p-3 rounded-2xl text-center">
-                              <span className="block text-xs font-bold text-slate-400 mb-1">חיבור</span>
-                              <span className="text-lg font-black text-purple-400">92%</span>
-                           </div>
-                        </div>
-
-                        <div className="space-y-3">
-                           <div className="flex justify-between text-[10px] font-black uppercase tracking-widest">
-                              <span className="text-red-500">רעש חיצוני (System Noise)</span>
-                              <span className="text-red-500">{noiseLevel}%</span>
-                           </div>
-                           <div className="w-full h-4 bg-black/40 rounded-full overflow-hidden border border-white/5">
-                              <div className="h-full bg-red-600 shadow-[0_0_15px_rgba(220,38,38,0.5)] transition-all duration-1000" style={{ width: `${noiseLevel}%` }} />
-                           </div>
-                        </div>
-                        <div className="space-y-3">
-                           <div className="flex justify-between text-[10px] font-black uppercase tracking-widest">
-                              <span className="text-emerald-500">צלילות פנימית (Inner Clarity)</span>
-                              <span className="text-emerald-500">{clarityLevel}%</span>
-                           </div>
-                           <div className="w-full h-4 bg-black/40 rounded-full overflow-hidden border border-white/5">
-                              <div className="h-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.5)] transition-all duration-1000" style={{ width: `${clarityLevel}%` }} />
-                           </div>
-                        </div>
-                     </div>
-
-                     <p className="mt-10 text-xs text-slate-400 font-bold italic leading-relaxed">
-                        "התרופה היא לא הוכחה שאתה פגום. היא הוכחה שאתה הריבון. <br /> היא ה-Mute של הרעש, המאפשרת לנשמה שלך להוביל את הפרארי."
-                     </p>
-                  </div>
-
-                  <div className="space-y-6">
-                     <input type="range" min="1" max="10" value={mood} onChange={(e) => setMood(parseInt(e.target.value))} className="w-full h-12 bg-white/10 rounded-full appearance-none cursor-pointer accent-indigo-500" />
-                     <div className="text-[9rem] font-black text-indigo-500 italic leading-none drop-shadow-2xl">{mood}</div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-6">
-                     {['סערה במוח', 'חוסר שקט', 'תקווה', 'עייפות'].map(e => (
-                        <button key={e} onClick={() => setSelectedEmotion(e)} className={`py-12 rounded-[3.5rem] font-black ${textSize} border-2 transition-all ${selectedEmotion === e ? 'bg-indigo-600 border-indigo-300 shadow-xl scale-[1.02]' : 'bg-white/5 border-white/10 hover:border-white/20'}`}>
-                           {e}
-                        </button>
-                     ))}
-                  </div>
-
-                  <button
-                     onClick={() => {
-                        if (onAddPoints) onAddPoints(10);
-                        startEmunaLive();
-                     }}
-                     disabled={!selectedEmotion}
-                     className="w-full bg-white text-black py-10 rounded-[4rem] font-black text-4xl shadow-2xl flex items-center justify-center gap-4 active:scale-95 transition-all"
-                  >
-                     <Mic size={40} /> לדבר עם המלווה
-                  </button>
                </div>
             )}
+
+            {/* The Anchor (Sleep Monitor) Always Visible inside Main */}
+            <div className="mb-6">
+               <TheAnchorDetector />
+            </div>
 
             {step === 'medication' && (
                <div className="animate-in zoom-in duration-700 pb-20 overflow-hidden">
                   {isLockedByGuardian ? (
                      <CyberGuardian
-                        label="BIO-REACTOR SOURCE CONTROL"
+                        label="בקרת תדלוק - מערכת ביו-ריאקטור"
                         onUnlock={() => setIsLockedByGuardian(false)}
                      />
                   ) : (
@@ -602,28 +444,28 @@ const PatientApp: React.FC<{
                className={`p-5 rounded-full transition-all flex items-center gap-3 ${step === 'mood' ? 'bg-blue-600 text-white shadow-lg' : 'text-slate-500 hover:text-white'}`}
             >
                <Home size={24} />
-               {step === 'mood' && <span className="font-black text-xs uppercase tracking-widest">Home</span>}
+               {step === 'mood' && <span className="font-black text-xs uppercase tracking-widest">בית</span>}
             </button>
             <button
                onClick={() => setStep('medication')}
                className={`p-5 rounded-full transition-all flex items-center gap-3 ${step === 'medication' ? 'bg-orange-500 text-white shadow-lg' : 'text-slate-500 hover:text-white'}`}
             >
                <Zap size={24} />
-               {step === 'medication' && <span className="font-black text-xs uppercase tracking-widest">Arsenal</span>}
+               {step === 'medication' && <span className="font-black text-xs uppercase tracking-widest">כלים</span>}
             </button>
             <button
                onClick={() => setStep('ops')}
                className={`p-5 rounded-full transition-all flex items-center gap-3 ${step === 'ops' ? 'bg-emerald-600 text-white shadow-lg' : 'text-slate-500 hover:text-white'}`}
             >
                <Activity size={24} />
-               {step === 'ops' && <span className="font-black text-xs uppercase tracking-widest">Ops Room</span>}
+               {step === 'ops' && <span className="font-black text-xs uppercase tracking-widest">חדר בקרה</span>}
             </button>
             <button
                onClick={() => onNavigate?.(AppRole.REWARDS)}
                className={`p-5 rounded-full transition-all flex items-center gap-3 ${step === 'supply' ? 'bg-amber-500 text-white shadow-lg' : 'text-slate-500 hover:text-white'}`}
             >
                <ShoppingBag size={24} />
-               {step === 'supply' && <span className="font-black text-xs uppercase tracking-widest">Supply</span>}
+               {step === 'supply' && <span className="font-black text-xs uppercase tracking-widest">חנות</span>}
             </button>
          </nav>
 
@@ -640,14 +482,15 @@ const PatientApp: React.FC<{
          </div>
 
          <style>{`
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        .animate-spin-slow {
-          animation: spin-slow 12s linear infinite;
-        }
-      `}</style>
+            @keyframes spin-slow {
+               from { transform: rotate(0deg); }
+               to { transform: rotate(360deg); }
+            }
+            .animate-spin-slow {
+               animation: spin-slow 12s linear infinite;
+            }
+         `}</style>
+
          {/* Privacy Shield Overlay */}
          {isPrivacyShieldActive && (
             <div className="fixed inset-0 z-[500] bg-black/40 backdrop-blur-[60px] flex items-center justify-center p-12 transition-all duration-700">

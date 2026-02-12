@@ -67,8 +67,8 @@ const CyberGuardian: React.FC<CyberGuardianProps> = ({ onUnlock, label }) => {
                         onClick={handleStartScan}
                         disabled={status !== 'locked'}
                         className={`relative w-48 h-48 rounded-full border-2 transition-all duration-500 flex items-center justify-center group overflow-hidden ${status === 'scanning' ? 'border-indigo-500 shadow-[0_0_50px_rgba(79,70,229,0.4)]' :
-                                status === 'granted' ? 'border-emerald-500 shadow-[0_0_50px_rgba(16,185,129,0.4)]' :
-                                    'border-white/10 hover:border-white/40'
+                            status === 'granted' ? 'border-emerald-500 shadow-[0_0_50px_rgba(16,185,129,0.4)]' :
+                                'border-white/10 hover:border-white/40'
                             }`}
                     >
                         {status === 'scanning' ? (
@@ -102,11 +102,11 @@ const CyberGuardian: React.FC<CyberGuardianProps> = ({ onUnlock, label }) => {
                     <div className="flex items-center justify-center gap-6 opacity-30">
                         <div className="flex items-center gap-2">
                             <ShieldAlert size={14} />
-                            <span className="text-[9px] font-black uppercase">E2EE Active</span>
+                            <span className="text-[9px] font-black uppercase">אבטחה פעילה</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <Eye size={14} />
-                            <span className="text-[9px] font-black uppercase">Zero Knowledge</span>
+                            <span className="text-[9px] font-black uppercase">פרטיות מלאה</span>
                         </div>
                     </div>
                 </div>

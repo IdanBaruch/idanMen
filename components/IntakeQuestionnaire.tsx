@@ -119,7 +119,7 @@ const IntakeQuestionnaire: React.FC<{ onComplete: (summary: string) => void }> =
           </div>
           <div>
             <h1 className="text-3xl font-black italic text-blue-400">הכרטיס לחופש</h1>
-            <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">Liberty Card Intake System</p>
+            <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">מערכת קבלה זריזה</p>
           </div>
         </div>
         <div className="text-xs font-black text-slate-400">שלב {currentStep + 1} מתוך {STEPS.length}</div>

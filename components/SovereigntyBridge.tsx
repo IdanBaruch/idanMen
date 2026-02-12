@@ -77,13 +77,13 @@ const SovereigntyBridge: React.FC = () => {
             <Scale size={24} />
           </div>
           <div>
-            <h1 className="text-xl font-black italic tracking-tighter">גשר הריבונות <span className="text-indigo-400 font-light tracking-normal italic">Logic Bridge</span></h1>
+            <h1 className="text-xl font-black italic tracking-tighter">גשר הריבונות <span className="text-indigo-400 font-light tracking-normal italic">גשר הלוגיקה</span></h1>
             <p className="text-[9px] text-slate-500 font-black uppercase tracking-widest mt-0.5 italic">היועץ הרוחני AI | עקיפת התנגדות דרך ביו-פרוקסי</p>
           </div>
         </div>
         <div className="bg-red-500/10 px-4 py-2 rounded-full border border-red-500/20 flex items-center gap-2">
           <div className="w-2 h-2 bg-red-500 rounded-full animate-ping" />
-          <span className="text-[10px] font-black uppercase tracking-widest text-red-400">Storm Proxy: Detected (88%)</span>
+          <span className="text-[10px] font-black uppercase tracking-widest text-red-400">זיהוי סערה: פעיל (88%)</span>
         </div>
       </header>
 
@@ -130,8 +130,8 @@ const SovereigntyBridge: React.FC = () => {
             {messages.map((msg, i) => (
               <div key={i} className={`flex ${msg.role === 'user' ? 'justify-start' : 'justify-end'} animate-in fade-in slide-in-from-bottom-2`}>
                 <div className={`max-w-[85%] p-6 rounded-[2.5rem] ${msg.role === 'user'
-                    ? 'bg-indigo-600 text-white rounded-tr-none shadow-xl shadow-indigo-600/20'
-                    : 'bg-white/5 border border-white/10 text-slate-200 rounded-tl-none italic backdrop-blur-md'
+                  ? 'bg-indigo-600 text-white rounded-tr-none shadow-xl shadow-indigo-600/20'
+                  : 'bg-white/5 border border-white/10 text-slate-200 rounded-tl-none italic backdrop-blur-md'
                   }`}>
                   <div className="flex items-center gap-2 mb-2 opacity-50">
                     {msg.role === 'user' ? <MessageSquare size={12} /> : <Sparkles size={12} />}

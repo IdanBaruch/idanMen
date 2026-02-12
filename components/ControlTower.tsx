@@ -17,12 +17,12 @@ const ControlTower: React.FC<ControlTowerProps> = ({ appointments, onCheckIn }) 
                     </div>
                     <div>
                         <h2 className="text-xl font-black italic tracking-tighter text-white">מגדל פיקוח אישי</h2>
-                        <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">Live Horizon Sync</p>
+                        <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">סנכרון פעילות בזמן אמת</p>
                     </div>
                 </div>
                 <div className="bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                    <span className="text-[9px] font-black text-emerald-400 uppercase tracking-widest">FHIR Active</span>
+                    <span className="text-[9px] font-black text-emerald-400 uppercase tracking-widest">נתונים מחוברים</span>
                 </div>
             </div>
 
@@ -39,8 +39,8 @@ const ControlTower: React.FC<ControlTowerProps> = ({ appointments, onCheckIn }) 
                             {/* Time and Icon Marker */}
                             <div className="relative z-10 flex flex-col items-center">
                                 <div className={`w-14 h-14 rounded-2xl flex items-center justify-center border-2 transition-all duration-500 ${isFulfilled ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400' :
-                                        isCurrent ? 'bg-indigo-600 border-indigo-400 text-white shadow-[0_0_20px_rgba(79,70,229,0.4)] animate-pulse' :
-                                            'bg-slate-900 border-white/5 text-slate-500'
+                                    isCurrent ? 'bg-indigo-600 border-indigo-400 text-white shadow-[0_0_20px_rgba(79,70,229,0.4)] animate-pulse' :
+                                        'bg-slate-900 border-white/5 text-slate-500'
                                     }`}>
                                     {isFulfilled ? <CheckCircle2 size={24} /> : <Clock size={24} />}
                                 </div>
@@ -49,7 +49,7 @@ const ControlTower: React.FC<ControlTowerProps> = ({ appointments, onCheckIn }) 
 
                             {/* Content Card */}
                             <div className={`flex-1 p-6 rounded-[2rem] border transition-all duration-500 ${isCurrent ? 'bg-indigo-950/20 border-indigo-500/30 shadow-xl scale-[1.02]' :
-                                    'bg-white/5 border-white/5 group-hover:bg-white/10'
+                                'bg-white/5 border-white/5 group-hover:bg-white/10'
                                 }`}>
                                 <div className="flex justify-between items-start mb-4">
                                     <div>
@@ -61,7 +61,7 @@ const ControlTower: React.FC<ControlTowerProps> = ({ appointments, onCheckIn }) 
                                     </div>
                                     {apt.type === 'free' && (
                                         <div className="bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full border border-amber-500/20 text-[9px] font-black uppercase tracking-tighter">
-                                            SVRN Practice
+                                            אימון ריבוני
                                         </div>
                                     )}
                                 </div>
@@ -72,7 +72,7 @@ const ControlTower: React.FC<ControlTowerProps> = ({ appointments, onCheckIn }) 
                                             onClick={() => onCheckIn?.(apt.id)}
                                             className="flex-1 bg-indigo-500 hover:bg-indigo-400 text-white py-3 rounded-xl font-black italic text-xs transition-all active:scale-95 shadow-lg shadow-indigo-500/20"
                                         >
-                                            סימון הגעה (Check-in)
+                                            סימון הגעה
                                         </button>
                                         <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-slate-400">
                                             <MapPin size={18} />
@@ -93,7 +93,7 @@ const ControlTower: React.FC<ControlTowerProps> = ({ appointments, onCheckIn }) 
             </div>
 
             <div className="p-8 bg-indigo-600/5 rounded-[3rem] border border-indigo-500/10 mt-12">
-                <p className="text-indigo-400 font-black text-[10px] uppercase tracking-widest mb-2">תובנת הצוות (Management Link):</p>
+                <p className="text-indigo-400 font-black text-[10px] uppercase tracking-widest mb-2">תובנת הצוות (קישור לניהול):</p>
                 <p className="text-indigo-100 italic text-xs leading-relaxed font-medium">
                     "יהונתן, הלו"ז שלך מסונכרן ישירות עם המדריכים במחלקה. ביצוע משימות בזמן מזכה אותך בנקודות ריבונות וקידום בתהליך השחרור."
                 </p>

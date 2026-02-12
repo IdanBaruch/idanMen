@@ -26,7 +26,7 @@ const DailyDigest: React.FC<DailyDigestProps> = ({ entries, onBack }) => {
                     </div>
                     <div>
                         <h1 className="text-3xl font-black italic tracking-tighter">היום שלך במספרים</h1>
-                        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 italic">Daily Victory Digest</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 italic">סיכום הניצחונות היומי</p>
                     </div>
                 </div>
                 <button onClick={onBack} className="p-4 hover:bg-white/5 rounded-full transition-colors rotate-180">
@@ -91,7 +91,7 @@ const DailyDigest: React.FC<DailyDigestProps> = ({ entries, onBack }) => {
                                 <Star fill="currentColor" size={32} />
                                 <div>
                                     <p className="font-black italic text-lg leading-tight">קיבלת מדליית ריבונות!</p>
-                                    <p className="text-[10px] font-bold opacity-70">Sovereignty Index Boost Activated</p>
+                                    <p className="text-[10px] font-bold opacity-70">שיפור במדד הריבונות הופעל</p>
                                 </div>
                             </div>
                         )}
@@ -126,7 +126,7 @@ const DailyDigest: React.FC<DailyDigestProps> = ({ entries, onBack }) => {
                 {/* Motivation Footer */}
                 <div className="text-center pt-8 space-y-4 opacity-70">
                     <Heart className="mx-auto text-rose-500 animate-pulse" />
-                    <p className="text-xs font-black uppercase tracking-widest text-slate-500">You are the sovereign of your narrative.</p>
+                    <p className="text-xs font-black uppercase tracking-widest text-slate-500">אתה הריבון של הסיפור שלך.</p>
                 </div>
             </main>
 

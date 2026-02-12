@@ -1,0 +1,28 @@
+flowchart TD
+    subgraph "The Anchor - Sleep Logic"
+        A[Smart Watch / Sleep Ring] -->|Sleep Data API| B(Analyze Sleep Duration & Quality)
+        B --> C{Sleep < 4 Hours?}
+        
+        C -- No (Green State) --> D[Standard Mode]
+        D --> E[Log Data to Dashboard]
+        
+        C -- Yes (Red State) --> F[Trigger 'Absorption Mode']
+        
+        subgraph "Absorption Mode Actions"
+            F --> G[Financial Shield: LOCK]
+            G --> H[Block Transactions > 50 ILS]
+            
+            F --> I[Emuna AI: GROUNDING]
+            I --> J[Increase Check-in Frequency]
+            I --> K[Change Tone to 'Calm/Directive']
+            
+            F --> L[Care Team Alert]
+            L --> M[Notify Case Manager: 'Risk of Psychosis']
+            L --> N[Notify Family: 'High Sensitivity Day']
+        end
+    end
+    
+    style F fill:#ef4444,stroke:#dc2626,stroke-width:4px,color:white
+    style G fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:black
+    style I fill:#3b82f6,stroke:#1d4ed8,stroke-width:2px,color:white
+    style L fill:#10b981,stroke:#059669,stroke-width:2px,color:white

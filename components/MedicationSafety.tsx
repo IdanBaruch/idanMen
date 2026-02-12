@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 // Added missing Loader2 and Quote icons to the lucide-react import list to resolve "Cannot find name" errors.
-import { 
-  ShieldAlert, Pill, AlertTriangle, CheckCircle2, 
+import {
+  ShieldAlert, Pill, AlertTriangle, CheckCircle2,
   Search, Info, X, Sparkles, Cloud, Activity, ArrowLeft,
   Database, ShieldX, Zap, Loader2, Quote
 } from 'lucide-react';
@@ -35,7 +35,7 @@ const MedicationSafety: React.FC = () => {
       שים לב לשגיאות מערכת מסוג "קמיליון" (Chameleon Bug) שבהן תרופות מאשפוזים קודמים קופצות אוטומטית לתיק הנוכחי ללא הצדקה.
       הרשימה: ${JSON.stringify(prescriptions)}.
       האם יש חריגה? מה המלצתך לצוות? ענה בקיצור נמרץ בעברית מקצועית.`;
-      
+
       const response = await ai.models.generateContent({
         model: 'gemini-3-flash-preview',
         contents: prompt
@@ -58,12 +58,12 @@ const MedicationSafety: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#f8fafc] text-[#1e293b] flex flex-col font-assistant overflow-y-auto pb-40" dir="rtl">
-      
+
       {/* Cloud & AWS Integration Banner */}
       <div className="bg-[#1e40af] text-white p-3 flex justify-between items-center px-8 text-[10px] font-bold shadow-md">
         <div className="flex items-center gap-3">
           <Cloud size={14} className="text-blue-200" />
-          <span>Guardian Safety Hub | AWS Cloud Hybrid Active</span>
+          <span>מוקד בטיחות | ענן מאובטח פעיל</span>
         </div>
         <div className="flex items-center gap-2">
           <Database size={12} className="opacity-50" />
@@ -77,14 +77,14 @@ const MedicationSafety: React.FC = () => {
             <ShieldAlert size={36} className="text-white" />
           </div>
           <div>
-            <h1 className="text-4xl font-black italic tracking-tighter text-[#1e40af]">Guardian <span className="text-[#dc2626]">Safety.</span></h1>
+            <h1 className="text-4xl font-black italic tracking-tighter text-[#1e40af]">בטיחות <span className="text-[#dc2626]">הגארדיאן.</span></h1>
             <p className="text-slate-400 text-xs font-black uppercase tracking-widest mt-1 italic">מניעת טעויות מרשם (Chameleon Bug Protection)</p>
           </div>
         </div>
       </header>
 
       <main className="flex-1 p-8 space-y-10 max-w-5xl mx-auto w-full">
-        
+
         {/* Warning Alert if Anomaly Found */}
         {prescriptions.some(p => p.status === 'anomaly') && (
           <div className="bg-red-50 border-2 border-red-200 p-8 rounded-[3.5rem] flex flex-col md:flex-row items-center gap-8 shadow-2xl animate-in zoom-in group">
@@ -92,9 +92,9 @@ const MedicationSafety: React.FC = () => {
               <ShieldX size={44} className="text-white animate-pulse" />
             </div>
             <div className="text-right">
-              <h3 className="text-3xl font-black text-[#dc2626] italic mb-1 tracking-tight">זיהוי חריגה קריטית (Anomaly Detected)</h3>
+              <h3 className="text-3xl font-black text-[#dc2626] italic mb-1 tracking-tight">זוהתה חריגה קריטית</h3>
               <p className="text-slate-600 text-lg font-bold leading-tight">
-                ה-OS זיהתה תרופה (Olanzapine) שנוספה לתיק שלך אוטומטית ללא חתימת רופא. <br/> <span className="text-red-700">אנא אל תיקח את התרופה עד לאישור ידני.</span>
+                ה-OS זיהתה תרופה (Olanzapine) שנוספה לתיק שלך אוטומטית ללא חתימת רופא. <br /> <span className="text-red-700">אנא אל תיקח את התרופה עד לאישור ידני.</span>
               </p>
             </div>
           </div>
@@ -106,14 +106,14 @@ const MedicationSafety: React.FC = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
               <Sparkles className="text-blue-600" size={28} />
-              <h3 className="text-2xl font-black italic tracking-tight text-[#1e40af]">AWS Cloud Safety Audit</h3>
+              <h3 className="text-2xl font-black italic tracking-tight text-[#1e40af]">ביקורת בטיחות בענן</h3>
             </div>
-            <button 
+            <button
               onClick={runAiAudit}
               disabled={isAuditing}
               className="bg-[#1e40af] text-white px-10 py-5 rounded-full font-black text-sm uppercase shadow-xl hover:bg-[#1e3a8a] transition-all disabled:opacity-50 flex items-center gap-2"
             >
-              {isAuditing ? <Loader2 className="animate-spin"/> : <Zap size={18}/>}
+              {isAuditing ? <Loader2 className="animate-spin" /> : <Zap size={18} />}
               {isAuditing ? 'מבצע ביקורת ענן...' : 'הרץ ביקורת AI'}
             </button>
           </div>
@@ -128,11 +128,11 @@ const MedicationSafety: React.FC = () => {
         {/* Prescription Grid */}
         <section className="space-y-6">
           <div className="flex justify-between items-center px-4">
-             <h3 className="text-[10px] font-black uppercase text-slate-400 tracking-[0.3em] italic">רשימת תרופות בתיק (Chameleon Sync)</h3>
-             <div className="flex gap-2 text-[8px] font-black uppercase text-slate-400">
-                <span className="flex items-center gap-1"><CheckCircle2 size={10} className="text-emerald-500"/> מאושר</span>
-                <span className="flex items-center gap-1"><AlertTriangle size={10} className="text-red-500"/> חריגה</span>
-             </div>
+            <h3 className="text-[10px] font-black uppercase text-slate-400 tracking-[0.3em] italic">רשימת תרופות בתיק (Chameleon Sync)</h3>
+            <div className="flex gap-2 text-[8px] font-black uppercase text-slate-400">
+              <span className="flex items-center gap-1"><CheckCircle2 size={10} className="text-emerald-500" /> מאושר</span>
+              <span className="flex items-center gap-1"><AlertTriangle size={10} className="text-red-500" /> חריגה</span>
+            </div>
           </div>
           <div className="grid grid-cols-1 gap-4">
             {prescriptions.map((p) => (
@@ -153,9 +153,9 @@ const MedicationSafety: React.FC = () => {
                 </div>
                 <div className="flex gap-4">
                   {p.status === 'anomaly' ? (
-                    <button onClick={() => confirmMed(p.id)} className="bg-emerald-600 text-white p-5 rounded-3xl shadow-xl hover:scale-105 transition-all" title="אישור ידני"><CheckCircle2 size={28}/></button>
+                    <button onClick={() => confirmMed(p.id)} className="bg-emerald-600 text-white p-5 rounded-3xl shadow-xl hover:scale-105 transition-all" title="אישור ידני"><CheckCircle2 size={28} /></button>
                   ) : (
-                    <button onClick={() => rejectMed(p.id)} className="bg-red-600 text-white p-5 rounded-3xl shadow-xl hover:scale-105 transition-all" title="דווח כחריגה"><ShieldX size={28}/></button>
+                    <button onClick={() => rejectMed(p.id)} className="bg-red-600 text-white p-5 rounded-3xl shadow-xl hover:scale-105 transition-all" title="דווח כחריגה"><ShieldX size={28} /></button>
                   )}
                 </div>
               </div>
@@ -165,14 +165,14 @@ const MedicationSafety: React.FC = () => {
 
         {/* Institutional Disclosure */}
         <section className="bg-slate-100 p-8 rounded-[3rem] border border-slate-200 opacity-60 mt-12">
-           <div className="flex items-start gap-4">
-              <Info className="text-slate-400 shrink-0" size={18} />
-              <p className="text-[10px] font-bold text-slate-500 italic leading-relaxed uppercase tracking-wider">
-                Guardian Safety OS v4.2 | המערכת מנטרת תקלות סנכרון בענן AWS Hybrid. 
-                כל פעולה מתועדת ביומן הביקורת הקליני (Audit Log). 
-                המערכת אינה מחליפה שיקול דעת של רופא מוסמך.
-              </p>
-           </div>
+          <div className="flex items-start gap-4">
+            <Info className="text-slate-400 shrink-0" size={18} />
+            <p className="text-[10px] font-bold text-slate-500 italic leading-relaxed uppercase tracking-wider">
+              Guardian Safety OS v4.2 | המערכת מנטרת תקלות סנכרון בענן AWS Hybrid.
+              כל פעולה מתועדת ביומן הביקורת הקליני (Audit Log).
+              המערכת אינה מחליפה שיקול דעת של רופא מוסמך.
+            </p>
+          </div>
         </section>
 
       </main>

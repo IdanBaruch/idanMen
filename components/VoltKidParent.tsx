@@ -59,8 +59,8 @@ const VoltKidParent: React.FC<Props> = ({ onBack }) => {
                             <ChevronLeft size={24} />
                         </button>
                         <div>
-                            <h1 className="text-2xl font-black tracking-tighter uppercase">VoltParent</h1>
-                            <p className="text-[10px] font-bold opacity-80 uppercase tracking-widest">Guardian Fulfillment Hub</p>
+                            <h1 className="text-2xl font-black tracking-tighter uppercase">וולט-הורה</h1>
+                            <p className="text-[10px] font-bold opacity-80 uppercase tracking-widest">מוקד מילוי הבקשות</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-3">

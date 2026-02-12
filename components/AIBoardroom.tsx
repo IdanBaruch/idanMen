@@ -21,7 +21,7 @@ const BOARD_MEMBERS: BoardMember[] = [
     {
         id: 'synapse',
         name: 'ד"ר סינפסה',
-        role: 'Chief Medical Audit',
+        role: 'ביקורת רפואית',
         team: 'red',
         icon: Siren,
         color: 'text-rose-500',
@@ -31,7 +31,7 @@ const BOARD_MEMBERS: BoardMember[] = [
     {
         id: 'architect',
         name: 'הארכיטקטית',
-        role: 'UX Strategist',
+        role: 'אסטרטגיית חווית משתמש',
         team: 'red',
         icon: Accessibility,
         color: 'text-amber-500',
@@ -41,7 +41,7 @@ const BOARD_MEMBERS: BoardMember[] = [
     {
         id: 'fortress',
         name: 'המבצר',
-        role: 'CISO',
+        role: 'אבטחת מידע',
         team: 'red',
         icon: Lock,
         color: 'text-indigo-400',
@@ -51,7 +51,7 @@ const BOARD_MEMBERS: BoardMember[] = [
     {
         id: 'shark',
         name: 'הכריש',
-        role: 'VC Investor',
+        role: 'משקיע',
         team: 'blue',
         icon: TrendingUp,
         color: 'text-blue-500',
@@ -65,13 +65,13 @@ const BOARD_MEMBERS: BoardMember[] = [
         team: 'blue',
         icon: BarChart3,
         color: 'text-emerald-500',
-        quote: 'ROI מיידי. בלי בולשיט.',
+        quote: 'רווח מיידי. בלי סיפורים.',
         longQuote: 'יום אשפוז עולה לך 2,500 ש"ח. המערכת שלי מפנה לך מיטה 2 ימים קודם. זה מיליוני שקלים בשנה של הכנסה נטו. תחתום על הפיילוט עכשיו או שתמשיך לשרוף תקציבים על מיטות שתקועות.'
     },
     {
         id: 'lioness',
         name: 'אמא לביאה',
-        role: 'Community/Family',
+        role: 'קהילה ומשפחה',
         team: 'blue',
         icon: Heart,
         color: 'text-rose-400',
@@ -108,15 +108,15 @@ const AIBoardroom: React.FC<AIBoardroomProps> = ({ onBack }) => {
                     <button
                         onClick={() => setActiveTeam('all')}
                         className={`px-6 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all ${activeTeam === 'all' ? 'bg-white text-black' : 'text-slate-400 hover:text-white'}`}
-                    >All</button>
+                    >הכל</button>
                     <button
                         onClick={() => setActiveTeam('red')}
                         className={`px-6 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all ${activeTeam === 'red' ? 'bg-rose-500 text-white' : 'text-slate-400 hover:text-white'}`}
-                    >Red Team</button>
+                    >צוות אדום</button>
                     <button
                         onClick={() => setActiveTeam('blue')}
                         className={`px-6 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all ${activeTeam === 'blue' ? 'bg-blue-600 text-white' : 'text-slate-400 hover:text-white'}`}
-                    >Blue Team</button>
+                    >צוות כחול</button>
                 </div>
             </header>
 
