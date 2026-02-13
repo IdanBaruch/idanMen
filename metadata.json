@@ -1,17 +1,8 @@
 {
-<<<<<<< HEAD
   "name": "מנחם ברוך AI - שלוותה OS",
   "description": "מערכת הפעלה תודעתית (Consciousness OS) לשליטה וריבונות הנפש על הגוף, מותאמת לסביבת המיון ופיקוח קליני.",
   "requestFramePermissions": [
     "camera",
     "microphone"
   ]
-=======
-  "description": "Sovereign-Bot: An enterprise-grade AI OS for consciousness management based on Tanya and the Drawer Method.",
-  "requestFramePermissions": [
-    "camera",
-    "microphone"
-  ],
-  "name": "בוט מבוסס תניא -Bot Live"
->>>>>>> acf3b63a1fa091fe206170fec8f8cc8f03be4897
 }
