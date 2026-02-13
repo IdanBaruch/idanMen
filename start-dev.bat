@@ -1,0 +1,3 @@
+@echo off
+echo Starting Shalvata OS Development Server...
+call npm run dev

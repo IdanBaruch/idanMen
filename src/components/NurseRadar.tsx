@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Radar, ShieldAlert, Activity, User, Brain, AlertTriangle, CheckCircle2, ChevronLeft, MapPin } from 'lucide-react';
-import '../styles/nurse-radar.css';
+import '../../styles/nurse-radar.css';
 
 interface PatientBlip {
     id: string;

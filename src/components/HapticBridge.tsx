@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Heart, ChevronLeft, ShieldCheck, Zap, Waves, HandMetal } from 'lucide-react';
-import '../styles/haptic-bridge.css';
+import '../../styles/haptic-bridge.css';
 
 const HapticBridge: React.FC<{ onBack?: () => void }> = ({ onBack }) => {
     const [intensity, setIntensity] = useState(0); // 0 to 100
