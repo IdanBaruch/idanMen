@@ -1,8 +1,9 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// שליפת המפתח מהגדרות המערכת
+// אתחול ה-AI
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY || "");
 
+// 1. צ'אט בסיסי
 export const chatWithGemini = async (prompt: string) => {
   try {
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
@@ -10,19 +11,27 @@ export const chatWithGemini = async (prompt: string) => {
     const response = await result.response;
     return response.text();
   } catch (error) {
-    console.error("Gemini API Error:", error);
-    return "מצטער, חלה שגיאה בחיבור לבינה המלאכותית.";
+    console.error("Gemini Error:", error);
+    return "שגיאה בחיבור לבינה המלאכותית.";
   }
 };
 
-// הפונקציה שהייתה חסרה וגרמה למסך השחור
+// 2. פונקציית ציר הזמן (שהייתה חסרה קודם)
 export const getFHIRTimeline = async (patientData: any) => {
-  // כרגע מחזירים מערך ריק או דאטה בסיסי כדי שהאפליקציה תעלה
-  console.log("Fetching timeline for:", patientData);
   return [];
 };
 
-// פונקציות עזר נוספות שייתכן ונדרשות
-export const analyzeSovereigntyLevel = async (score: number) => {
-  return score > 70 ? "ריבונות גבוהה" : "נדרש ליווי";
+// 3. פונקציית הטריאז' החי (החלק שחסר עכשיו)
+export const startLiveTriageSession = async () => {
+  console.log("Starting live triage session...");
+  return { status: "active" };
 };
+
+// 4. ניהול אודיו (Stub)
+export const AudioManager = {
+  start: () => console.log("Audio started"),
+  stop: () => console.log("Audio stopped"),
+};
+
+// 5. הגדרת סוג תור (Placeholder)
+export const FHIRAppointment = {};
