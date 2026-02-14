@@ -1,37 +1,41 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google/generative-ai"; // וודא שזה ה-SDK המותקן
+import { SYSTEM_INSTRUCTION } from "../constants";
+import { SessionSummary } from "../types";
 
-// אתחול ה-AI
-const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY || "");
+export class GeminiService {
+  private genAI: GoogleGenerativeAI;
 
-// 1. צ'אט בסיסי
-export const chatWithGemini = async (prompt: string) => {
-  try {
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    return response.text();
-  } catch (error) {
-    console.error("Gemini Error:", error);
-    return "שגיאה בחיבור לבינה המלאכותית.";
+  constructor() {
+    // שימוש ב-import.meta.env עבור Vite
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+    if (!apiKey) throw new Error("Missing API Key");
+    this.genAI = new GoogleGenerativeAI(apiKey);
   }
-};
 
-// 2. פונקציית ציר הזמן (שהייתה חסרה קודם)
-export const getFHIRTimeline = async (patientData: any) => {
-  return [];
-};
+  async processInput(input: string, sources: string[]) {
+    const model = this.genAI.getGenerativeModel({
+      model: "gemini-2.0-flash", // מודל יציב ומהיר
+      systemInstruction: SYSTEM_INSTRUCTION
+    });
 
-// 3. פונקציית הטריאז' החי (החלק שחסר עכשיו)
-export const startLiveTriageSession = async () => {
-  console.log("Starting live triage session...");
-  return { status: "active" };
-};
+    const context = sources.length > 0
+      ? `\n\n### SOURCES ###\n${sources.join('\n')}`
+      : "";
 
-// 4. ניהול אודיו (Stub)
-export const AudioManager = {
-  start: () => console.log("Audio started"),
-  stop: () => console.log("Audio stopped"),
-};
+    const result = await model.generateContent(input + context);
+    return result.response.text(); // שים לב לסוגריים ()
+  }
 
-// 5. הגדרת סוג תור (Placeholder)
-export const FHIRAppointment = {};
+  async generateSummary(history: string[]): Promise<SessionSummary> {
+    const model = this.genAI.getGenerativeModel({
+      model: "gemini-2.0-flash",
+      generationConfig: { responseMimeType: "application/json" }
+    });
+
+    const prompt = `Generate a medical-grade summary using the Drawer Method. HISTORY: ${history.join('\n')}`;
+    const result = await model.generateContent(prompt);
+    return JSON.parse(result.response.text());
+  }
+}
+
+export const gemini = new GeminiService();
