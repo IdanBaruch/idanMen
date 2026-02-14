@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { AudioManager } from '../../services/geminiService';
+import { AudioManager } from '../services/geminiService';
 import '../../styles/whispering-interface.css';
 
 interface WhisperingButtonProps {

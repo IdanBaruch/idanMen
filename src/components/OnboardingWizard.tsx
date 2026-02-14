@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSettings, UserPersona, ReligiousLevel } from '../../contexts/SettingsContext';
+import { useSettings, UserPersona, ReligiousLevel } from '../contexts/SettingsContext';
 import { Shield, Users, Activity, BookOpen, Heart, Globe, CheckCircle2, ArrowRight } from 'lucide-react';
 
 const OnboardingWizard: React.FC = () => {

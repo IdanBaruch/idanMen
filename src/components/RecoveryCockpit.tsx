@@ -7,7 +7,7 @@ import {
    Dumbbell, Utensils, UserPlus, Star, ShoppingCart,
    Activity, Bell, ShieldCheck, HeartPulse
 } from 'lucide-react';
-import { startLiveTriageSession } from '../../services/geminiService';
+import { startLiveTriageSession } from '../services/geminiService';
 import { SafetyContact } from '../types';
 
 const RecoveryCockpit: React.FC = () => {

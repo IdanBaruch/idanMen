@@ -1,6 +1,6 @@
 import React from 'react';
 import { Clock, CheckCircle2, Circle, Calendar, User, MapPin, Info } from 'lucide-react';
-import { FHIRAppointment } from '../../services/geminiService';
+import { FHIRAppointment } from '../services/geminiService';
 
 interface ControlTowerProps {
     appointments: FHIRAppointment[];

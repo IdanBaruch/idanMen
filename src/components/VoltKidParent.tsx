@@ -5,7 +5,7 @@ import {
     AlertTriangle, Filter, ClipboardList, Check
 } from 'lucide-react';
 import { RequestItem, RequestStatus } from '../types';
-import { MOCK_REQUESTS, VOLT_CATEGORIES } from '../../data/voltKidMockData';
+import { MOCK_REQUESTS, VOLT_CATEGORIES } from '../data/voltKidMockData';
 
 interface Props {
     onBack?: () => void;

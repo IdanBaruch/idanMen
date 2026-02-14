@@ -22,7 +22,7 @@ import HapticBridge from './HapticBridge';
 import WhisperingButton from './WhisperingButton';
 import DailyDigest from './DailyDigest';
 import TheAnchorDetector from './TheAnchorDetector';
-import { startLiveTriageSession, AudioManager, getFHIRTimeline, FHIRAppointment } from '../../services/geminiService';
+import { startLiveTriageSession, AudioManager, getFHIRTimeline, FHIRAppointment } from '../services/geminiService';
 import { LedgerEntry } from '../types';
 
 type Screen = 'mood' | 'ai' | 'journal' | 'medication' | 'success' | 'ops' | 'supply' | 'timeline' | 'forecast' | 'voice' | 'haptic' | 'digest';

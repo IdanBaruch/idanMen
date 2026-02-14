@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ShieldAlert, Fingerprint, Eye, Lock, Unlock, Loader2, ShieldCheck } from 'lucide-react';
-import { verifyBiometrics } from '../../utils/securityUtils';
+import { verifyBiometrics } from '../utils/securityUtils';
 
 interface CyberGuardianProps {
     onUnlock: () => void;

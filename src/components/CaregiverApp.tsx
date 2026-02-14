@@ -7,7 +7,7 @@ import {
   Clock, ShieldCheck, Info, Search, MapPin, Share2, Activity, Zap, Database, Fingerprint
 } from 'lucide-react';
 import { LedgerEntry } from '../types';
-import ChameleonBridge, { ClinicalScores } from '../../services/ChameleonBridge';
+import ChameleonBridge, { ClinicalScores } from '../services/ChameleonBridge';
 
 
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, Info, ClipboardList, Search, Activity, Link2, Sparkles, Zap, Lock, Users, ShieldCheck } from 'lucide-react';
-import { decodePsychiatricSummary } from '../../services/geminiService';
+import { decodePsychiatricSummary } from '../services/geminiService';
 
 interface ConsultationPortalProps {
     onBack: () => void;

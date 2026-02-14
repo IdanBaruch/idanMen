@@ -6,7 +6,7 @@ import {
     AlertCircle
 } from 'lucide-react';
 import { RequestItem, CategoryId, RequestStatus } from '../types';
-import { VOLT_CATEGORIES, MOCK_REQUESTS } from '../../data/voltKidMockData';
+import { VOLT_CATEGORIES, MOCK_REQUESTS } from '../data/voltKidMockData';
 
 interface Props {
     onBack?: () => void;

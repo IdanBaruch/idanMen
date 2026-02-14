@@ -7,7 +7,7 @@ import {
   ArrowRight, Activity, Clock, Wallet, Eraser, Brain
 } from 'lucide-react';
 import { GoogleGenAI } from '@google/genai';
-import { startLiveTriageSession, AudioManager } from '../../services/geminiService';
+import { startLiveTriageSession, AudioManager } from '../services/geminiService';
 
 const SMOKING_MYTHS = [
   { id: 'stress', myth: 'סיגריה עוזרת לי להירגע מהלחץ', fact: 'הסיגריה יוצרת את הלחץ על ידי מחסור בניקוטין, ואז "מרגיעה" רק את מה שהיא עצמה גרמה.' },
