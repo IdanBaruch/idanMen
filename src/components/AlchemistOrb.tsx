@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Mic, ShieldCheck, ChevronLeft, Activity, Volume2 } from 'lucide-react';
-import '../../styles/alchemist-orb.css';
+import '../styles/alchemist-orb.css';
 import { analyzeThought } from '../services/AlchemistAgent';
 
 interface AlchemistOrbProps {

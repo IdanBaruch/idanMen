@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Pill, Battery, Zap, ShieldCheck, Sword, Trophy, ChevronLeft, Hexagon } from 'lucide-react';
-import '../../styles/bio-reactor-v2.css';
+import '../styles/bio-reactor-v2.css';
 
 interface Medication {
     id: string;
